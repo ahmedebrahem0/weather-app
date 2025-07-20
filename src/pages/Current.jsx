@@ -17,7 +17,7 @@ import WeatherMap from "../components/WeatherMap";
 
 export default function Current() {
   const [location, setLocation] = useState("Egypt");
-  const [days, setDays] = useState(3);
+  const [days, setDays] = useState(0);
   const [date, setDate] = useState(() => {
     const today = new Date();
     return today.toISOString().split("T")[0];

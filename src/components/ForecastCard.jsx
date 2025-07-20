@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { WiHumidity, WiStrongWind } from 'react-icons/wi';
 
 const ForecastCard = ({ forecast }) => {
+  console.log("Forecast data:", forecast);
   if (!forecast?.forecastday || forecast.forecastday.length === 0) return null;
 
   const formatDate = (dateString) => {
@@ -25,7 +26,7 @@ const ForecastCard = ({ forecast }) => {
         📅 Weather Forecast
       </h2>
       
-      <div className="flex flex-col gap-6 max-w-md mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {forecast.forecastday.map((day, index) => (
           <motion.div
             key={index}

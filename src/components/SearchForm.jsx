@@ -30,17 +30,19 @@ const SearchForm = ({ location, setLocation, days, setDays, date, setDate, onSea
           </div>
 
           {/* Days Input */}
-          <div className="relative">
-            <FaThermometerHalf className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg" />
+          <div className="relative flex items-center">
+            <FaThermometerHalf className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg" />
             <input
               type="number"
-              placeholder="Forecast days (0-7)"
+              placeholder="Forecast days (0-3)"
               min="0"
-              max="7"
+              max="3"
               value={days}
               onChange={(e) => setDays(parseInt(e.target.value) || 0)}
-              className="w-full pl-10 pr-4 py-3 bg-white/90 text-gray-800 rounded-xl border-2 border-transparent focus:border-blue-400 focus:outline-none transition-all duration-300 placeholder-gray-500"
+              className="w-full pl-10 pr-4 py-3 bg-white/90 text-gray-800 rounded-xl border-2 border-transparent focus:border-blue-400 focus:outline-none transition-all duration-300 placeholder-gray-500 text-base align-middle"
+              style={{ height: '48px' }}
             />
+            <div className="text-xs text-gray-400 mt-1 ml-2 absolute left-0 top-full">max 3 Day</div>
           </div>
 
           {/* Date Input */}
